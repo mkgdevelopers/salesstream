@@ -96,18 +96,17 @@ SaleStream - Affiliate Management System                                </p>
                                 <ul>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-envelope" /> support@appie.com
+                                            <i className="fal fa-envelope" /> sales@thevista.one
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-phone" /> +(642) 342 762 44
+                                            <i className="fal fa-phone" /> +92 300 855 2638
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <i className="fal fa-map-marker-alt" /> 442 Belle Terre
-                                            St Floor 7, San Francisco, AV 4206
+                                            <i className="fal fa-map-marker-alt" /> G19, Paris Mall, Lehtrar Road, Near Burma Bridge, Islamabad
                                         </a>
                                     </li>
                                 </ul>
@@ -141,7 +140,7 @@ SaleStream - Affiliate Management System                                </p>
                                     </ul>
                                 </div>
                                 <div className="copyright-text">
-                                    <p>Copyright © 2021 Appie. All rights reserved.</p>
+                                    <p>Copyright © 2025 Sales Stream. All rights reserved.</p>
                                 </div>
                             </div>
                         </div>
