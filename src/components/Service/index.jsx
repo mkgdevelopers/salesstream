@@ -25,9 +25,8 @@ function Service() {
             <TestimonialHomeEight/>
             {/* <FeaturesHomeTwo/> */}
 
-            {/* <DetailsService /> */}
-            {/* <WhyChooseUs/> */}
-            {/* <ProjectHomeOne /> */}
+            {/* <DetailsService />
+            <ProjectHomeOne /> */}
             <FooterHomeOne />
             <BackToTop />
         </>

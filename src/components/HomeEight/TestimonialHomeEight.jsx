@@ -15,6 +15,7 @@ function TestimonialHomeEight() {
     const fetchFeatures = async () => {
       const response = await client.fetch(`*[_type == 'feature']`);
       setFeatures(response);
+      console.log(features)
     };
     fetchFeatures();
   }, []);
@@ -49,7 +50,7 @@ function TestimonialHomeEight() {
   };
   return (
     <>
-      <div className="appie-testimonial-about-area pb-45 mt-50">
+      {/* <div className="appie-testimonial-about-area pb-45 mt-50">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-7">
@@ -57,7 +58,7 @@ function TestimonialHomeEight() {
                 <h3 className="appie-title">
                   All-in-One Affiliate Management Platform
                 </h3>
-                {/* <p>The app provides design and digital marketing.</p> */}
+                <p>The app provides design and digital marketing.</p>
               </div>
             </div>
           </div>
@@ -102,14 +103,27 @@ function TestimonialHomeEight() {
                 </span>
               </div>
             </div>
-{/* <div className="text-center mt-5">
-  <h4 className="h4 fw-semibold mb-2">Ready to get started?</h4>
-  <button className="btn btn-primary px-4 py-2">Get Started Free</button>
-</div> */}
-
           </div>
         </div>
-      </div>
+      </div> */}
+
+
+<div className="feature-heading">
+  <h2>All-in-One Affiliate Management Platform</h2>
+</div>
+
+<div className="features-container">
+  {features.map((feature) => (
+    <div key={feature._id} className="feature-card">
+      <h4>{feature.heading}</h4>
+      <ul>
+        <li>{feature.para1}</li>
+        <li>{feature.para2}</li>
+      </ul>
+    </div>
+  ))}
+</div>
+
     </>
   );
 }
