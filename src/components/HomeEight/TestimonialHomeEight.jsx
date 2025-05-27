@@ -1,130 +1,42 @@
-import React, { useRef } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import user from "../../assets/images/testimonial-user-1.png";
+import React, { useEffect, useState } from "react";
 import { client } from "../../../sanityClient";
-import { useEffect } from "react";
-import { useState } from "react";
 
 function TestimonialHomeEight() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const [features, setFeatures] = useState([]);
+
   useEffect(() => {
     const fetchFeatures = async () => {
-      const response = await client.fetch(`*[_type == 'feature']`);
+      const response = await client.fetch(`*[_type == "feature"] | order(_createdAt asc)`);
       setFeatures(response);
-      console.log(features)
     };
     fetchFeatures();
   }, []);
-  const articleCarosel = useRef();
-  const peopleCarosel = useRef();
-  const sliderNext = () => {
-    articleCarosel.current?.slickNext();
-    peopleCarosel.current?.slickNext(); // only runs if current exists
-  };
 
-  const sliderPrev = () => {
-    articleCarosel.current?.slickPrev();
-    peopleCarosel.current?.slickPrev(); // only runs if current exists
-  };
-  const settingsForArticle = {
-    autoplay: false,
-    arrows: false,
-    dots: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    afterChange: (index) => setCurrentIndex(index),
-  };
-
-  const settingsForPeople = {
-    centerMode: true,
-    centerPadding: "0px",
-    autoplay: true,
-    arrows: false,
-    dots: false,
-    slidesToShow: 9,
-    slidesToScroll: 1,
-  };
   return (
-    <>
-      {/* <div className="appie-testimonial-about-area pb-45 mt-50">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <div className={`appie-section-title text-center`}>
-                <h3 className="appie-title">
-                  All-in-One Affiliate Management Platform
-                </h3>
-                <p>The app provides design and digital marketing.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div
-                className="testimonial-about-slider-active"
-                style={{ position: "relative" }}
-              >
-                <span
-                  onClick={sliderPrev}
-                  className="prev slick-arrow"
-                  style={{ display: "block" }}
-                >
-                  <i className="fal fa-arrow-left"></i>
-                </span>
-
-                <Slider {...settingsForArticle} ref={articleCarosel}>
-                  {features.map((feature) => (
-                    <div className="testimonial-parent-item" key={feature._id}>
-                      <div className="testimonial-box">
-                        <h3>{feature.heading}</h3>
-                        <ul>
-                          <li>{feature.para1}</li>
-                          <li>{feature.para2}</li>
-                        </ul>
-                      </div>
-                    </div>
-                  ))}
-                </Slider>
-                
-                <div style={{ textAlign: "center", marginTop: "10px" }}>
-                  {currentIndex + 1} / {features.length}
-                </div>
-
-                <span
-                  onClick={sliderNext}
-                  className="next slick-arrow"
-                  style={{ display: "block" }}
-                >
-                  <i className="fal fa-arrow-right"></i>
-                </span>
-              </div>
-            </div>
-          </div>
+    <section className="premium-feature-section" id="features">
+      <div className="container">
+        <div className="feature-header">
+          <h2>
+            Built for Performance. <span>Designed for Growth.</span>
+          </h2>
+          <p>
+            Our system simplifies affiliate management so you can scale smarter. Spend less time fixing,
+            more time growing.
+          </p>
         </div>
-      </div> */}
 
-
-<div className="feature-heading">
-  <h2>All-in-One Affiliate Management Platform</h2>
-</div>
-
-<div className="features-container">
-  {features.map((feature) => (
-    <div key={feature._id} className="feature-card">
-      <h4>{feature.heading}</h4>
-      <ul>
-        <li>{feature.para1}</li>
-        <li>{feature.para2}</li>
-      </ul>
-    </div>
-  ))}
-</div>
-
-    </>
+        <div className="feature-list">
+          {features.map((item, i) => (
+            <div key={item._id} className="feature-item">
+              <h3>{item.title}</h3>
+              <p><strong>Problem:</strong> {item.problem}</p>
+              <p><strong>Solution:</strong> {item.solution}</p>
+              {item.note && <p>{item.note}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

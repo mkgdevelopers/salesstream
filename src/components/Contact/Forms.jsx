@@ -8,9 +8,10 @@ function Forms() {
           <div className="row">
             <div className="col-md-4">
               <div className="contact--info-area">
-                <h3>Ready to Take Control of Your Affiliate Program?</h3>
-                <p>Let’s get you started with a free trial or custom demo.</p>
-                <div className="single-info">
+                <h3>Let’s Take Your Affiliate Strategy to the Next Level
+</h3>
+                <p>Ready to upgrade from chaos to control?</p>
+                {/* <div className="single-info">
                   <h5>Headquaters</h5>
                   <p>
                     <i className="fal fa-home"></i>
@@ -29,7 +30,7 @@ function Forms() {
                     <strong> Quetta</strong> <br />
                     Shershar Road, Quetta <br />
                   </p>
-                </div>
+                </div> */}
                 <div className="single-info">
                   <h5>Phone</h5>
                   <p>

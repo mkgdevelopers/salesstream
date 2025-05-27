@@ -34,13 +34,13 @@ function HeroHomeFour() {
                   <a className="main-btn" href="#">
                     Schedule a Demo
                   </a>
-                  <a
+                  {/* <a
                     onClick={(e) => handleShowVideo(e)}
                     className="appie-video-popup"
                     href="https://www.youtube.com/watch?v=EE7NqzhMDms"
                   >
                     <i className="fas fa-play"></i> Watch the trailer
-                  </a>
+                  </a> */}
                 </div>
 
                 <div
