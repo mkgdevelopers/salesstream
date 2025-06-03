@@ -1,0 +1,273 @@
+/* Base Styles */
+.sales-stream-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  color: white;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cta-content h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.primary-button, .secondary-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background: white;
+  color: #3b82f6;
+  border: none;
+}
+
+.secondary-button {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.secondary-button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+}
+
+.quote-mark {
+  font-size: 5rem;
+  line-height: 1;
+  color: #e2e8f0;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin: 20px 0 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.author {
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Roles Section */
+.roles-section {
+  padding: 100px 0;
+  background: #f1f5f9;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.role-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.role-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 100px 0;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-section h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.mission-section .lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Final CTA */
+.final-cta {
+  padding: 100px 0;
+  background: #3b82f6;
+  color: white;
+  text-align: center;
+}
+
+.final-cta-content h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background: white;
+  color: #3b82f6;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cta-buttons {
+    justify-content: center;
+  }
+  
+  .features-grid, .roles-grid {
+    grid-template-columns: 1fr;
+  }
+}
