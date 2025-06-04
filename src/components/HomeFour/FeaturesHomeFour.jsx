@@ -11,7 +11,7 @@ function FeaturesHomeFour() {
     useEffect(() => {
         const fetchBenefits = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/benefits');
+                const res = await axios.get('https://salesstream-backend.vercel.app/api/benefits');
                 setBenefits(res.data);
             } catch (err) {
                 console.error('Failed to fetch benefits:', err);

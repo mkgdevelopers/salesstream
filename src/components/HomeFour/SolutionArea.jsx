@@ -7,7 +7,7 @@ function SolutionArea({ style }) {
     useEffect(() => {
         const fetchSolutions = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/solutions');
+                const res = await axios.get('https://salesstream-backend.vercel.app/api/solutions');
                 setSolutionss(res.data);
             } catch (err) {
                 console.error('Failed to fetch benefits:', err);

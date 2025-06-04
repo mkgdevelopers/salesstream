@@ -24,7 +24,7 @@ function HelpPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/help", formData);
+      await axios.post("https://salesstream-backend.vercel.app/api/help", formData);
       alert("Help request submitted!");
       setFormData({ email: "", message: "" });
     } catch (error) {
