@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/benefits";
+const API = "https://salesstream-backend.vercel.app/api/benefits";
 
 const HomepageBenefits = () => {
   const [benefits, setBenefits] = useState([]);

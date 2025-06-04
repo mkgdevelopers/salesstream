@@ -5,7 +5,7 @@ const HomepageSolutions = () => {
   const [solutions, setSolutions] = useState([]);
   const [form, setForm] = useState({ title: "", desc: "", icon: "" });
   const [editId, setEditId] = useState(null);
-  const API = "http://localhost:5000/api/solutions"; // change if hosted
+  const API = "https://salesstream-backend.vercel.app/api/solutions"; // change if hosted
 
   // Fetch on mount
   useEffect(() => {
